@@ -1,0 +1,25 @@
+.navbar {
+  background-color: rgb(18, 179, 233);
+}
+#top_nav{
+  margin-bottom: 3rem;
+}
+.scroller {
+  color: rgb(255, 255, 255);
+  margin: 0 1rem;
+  font-size: 20px;
+}
+.scroller:hover {
+  color: rgb(255, 0, 153);
+}
+.image-container {
+  width: 50%;
+  height: 50%;
+  margin: 50px auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
