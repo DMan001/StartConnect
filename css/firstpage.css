@@ -28,7 +28,7 @@ i.bi-house {
   color: rgb(219, 231, 158);
 }
 #frase{
-  background-color: #ccc;
+  background-color: #bcb7b7;
 }
 .container {
   display: flex;
@@ -88,7 +88,7 @@ h1 {
   padding-top:30px;
   display: flex;
   flex-direction: column;
-  background-color:rgba(99, 105, 102, 0.587);
+  background-color: #bcb7b7;
   overflow-x: hidden;
 }
 .card-header{
@@ -96,4 +96,24 @@ h1 {
   color: azure;
   font-size: 20px;
   font-family: Arial, sans-serif;
+}
+#map {
+  background-color: #eee7e7b6 !important;
+  width: 100%;
+  height: 500px; 
+}
+.jvectormap-region {
+  fill: #2196F3;
+  cursor: pointer;
+}
+.jvectormap-container {
+  background-color:#ccc !important;
+}
+#titolo-2{
+  color: #2196F3;
+  margin-bottom: 0;
+}
+.titolo-2-container{
+  background-color:#ccc;
+  margin-bottom: 0;
 }
