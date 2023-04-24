@@ -1,25 +1,25 @@
-.navbar {
-  background-color: rgb(18, 179, 233);
+.navbar-scroll {
+  background-color: #17b2ff;
+  z-index: 2;
+  height: 80px;
 }
-#top_nav{
-  margin-bottom: 3rem;
+.nav-link{
+  color:azure;
+  font-size: 18px; 
+  font-family: Arial, sans-serif;
+  margin-right: 10px;
 }
-.scroller {
-  color: rgb(255, 255, 255);
-  margin: 0 1rem;
-  font-size: 20px;
+.nav-link:hover{
+  color:rgb(225, 218, 13);
 }
-.scroller:hover {
-  color: rgb(255, 0, 153);
+.image-container{
+  margin-top: 80px;
+  z-index: 1;
 }
-.image-container {
-  width: 50%;
-  height: 50%;
-  margin: 50px auto;
+.navbar-brand {
+  padding-left: 2rem;
 }
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+i.bi-house {
+  font-size: 30px;
+  color: rgb(219, 231, 158);
 }
