@@ -23,3 +23,46 @@ i.bi-house {
   font-size: 30px;
   color: rgb(219, 231, 158);
 }
+#frase{
+  margin-top: 50px;
+  background-color: #ccc;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.row {
+  display: flex;
+  flex-grow: 1;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow: hidden;
+}
+.img-show{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#titolo{
+  color: #11063a;
+  font-size: 60px;
+  font-family: Arial, sans-serif;
+  margin-top: 80px;
+}
+.opportunita{
+  color: #0b5629;
+  
+}
