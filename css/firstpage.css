@@ -1,6 +1,16 @@
 .searchb{
   padding-top: 10px;
 }
+.btn-outline-success {
+  color: #fff;
+  background-color: #17b2ff;
+  border-color: #17b2ff;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #0e83c4;
+  border-color: #0e83c4;
+}
 .navbar {
   background-color: #17b2ff;
   z-index: 2;
