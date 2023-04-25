@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="css/firstpage.css">
+  <link rel="stylesheet" href="jquery\jquery-jvectormap-2.0.5.css">
+  <script src="jquery\jquery-3.6.4.js"></script>
+  <script src="jquery\jquery-jvectormap-2.0.5.min.js"></script>
+  <script src="map.js"></script>
+  <script src="jquery\jquery-jvectormap-it-mill.js"></script>
   <title>StartConnect</title>
 </head>
 
@@ -49,6 +54,17 @@
         cambiamenti, e siamo qui per supportare e promuovere questo processo.</p>
     </div>
   </div>
+  
+  <div class="map-container">
+    <div class="titolo-2-container">
+      <h2 id="titolo-2">Trova i prossimi eventi:</h2>
+      <form class="searchb mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    <div id="map"></div>
+  </div>
   <div id="frase">
     <div class="container">
       <h1 id="titolo">Le nostre Opportunità</h1>
@@ -63,12 +79,6 @@
           <h3 class="opportunita">Hai un'idea geniale in mente?</h3>
           <a href="#">
             <img src="images/idea.jpg" alt="image" class="img-show">
-          </a>
-        </div>
-        <div class="col">
-          <h3 class="opportunita">Diventa un angel</h3>
-          <a href="#">
-            <img src="images/angel.jpg" alt="image" class="img-show">
           </a>
         </div>
       </div>

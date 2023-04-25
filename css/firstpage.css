@@ -1,4 +1,16 @@
-
+.searchb{
+  padding-top: 10px;
+}
+.btn-outline-success {
+  color: #fff;
+  background-color: #17b2ff;
+  border-color: #17b2ff;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #0e83c4;
+  border-color: #0e83c4;
+}
 .navbar {
   background-color: #17b2ff;
   z-index: 2;
@@ -16,10 +28,6 @@
 .nav-link:hover{
   color:rgb(225, 218, 13);
 }
-.image-container{
-  margin-top: 80px;
-  z-index: 1;
-}
 .navbar-brand {
   padding-left: 2rem;
 }
@@ -28,7 +36,7 @@ i.bi-house {
   color: rgb(219, 231, 158);
 }
 #frase{
-  background-color: #ccc;
+  background-color: #bcb7b7;
 }
 .container {
   display: flex;
@@ -38,6 +46,8 @@ i.bi-house {
 .container-2 {
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -88,7 +98,7 @@ h1 {
   padding-top:30px;
   display: flex;
   flex-direction: column;
-  background-color:rgba(99, 105, 102, 0.587);
+  background-color: #bcb7b7;
   overflow-x: hidden;
 }
 .card-header{
@@ -96,4 +106,24 @@ h1 {
   color: azure;
   font-size: 20px;
   font-family: Arial, sans-serif;
+}
+.jvectormap-region {
+  fill: #2196F3;
+  cursor: pointer;
+}
+.jvectormap-container {
+  background-color:#ccc !important;
+}
+#map {
+  background-color: #eee7e7b6 !important;
+  width: 100%;
+  height: 500px; 
+}
+#titolo-2{
+  color: #2196F3;
+  margin-bottom: 0;
+}
+.titolo-2-container{
+  background-color:#ccc;
+  margin-bottom: 0;
 }
