@@ -1,0 +1,23 @@
+.container-5{
+  padding-top:30px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group{
+  margin-left: 5px;
+  width:70%;
+  margin-bottom:10px;
+}
+h1{
+  font-size: 40px; 
+  color: #2196F3; 
+  font-weight: bold; 
+  text-align: start; 
+  margin-top: 30px; 
+  margin-left: 5px;
+}
+
+.btn{
+  margin-left: 5px;
+  margin-top: 10px;
+}
