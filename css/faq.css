@@ -1,0 +1,11 @@
+section {
+  background-color: #bbd5eb;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.titoloi{
+  margin-top: 50px;
+  color: #2196F3;
+}
