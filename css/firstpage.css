@@ -1,3 +1,6 @@
+.searchb{
+  padding-top: 10px;
+}
 .navbar {
   background-color: #17b2ff;
   z-index: 2;
@@ -33,6 +36,8 @@ i.bi-house {
 .container-2 {
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
+  overflow-x: hidden;
 }
 
 h1 {
