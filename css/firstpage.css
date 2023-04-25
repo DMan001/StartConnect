@@ -114,11 +114,6 @@ h1 {
 .jvectormap-container {
   background-color:#ccc !important;
 }
-#map {
-  background-color: #eee7e7b6;
-  width: 100%;
-  height: 600px; 
-}
 #titolo-2{
   color: #2196F3;
   margin-bottom: 0;
@@ -130,4 +125,18 @@ h1 {
 }
 h2{
   padding-bottom: 5px;
+}
+@media (max-width: 1000px) {
+  #map {
+    background-color: #eee7e7b6;
+    width: 100%;
+    height: 400px; 
+  }
+}
+@media (min-width: 1000px) {
+  #map {
+    background-color: #eee7e7b6;
+    width: 100%;
+    height: 600px; 
+  }
 }
