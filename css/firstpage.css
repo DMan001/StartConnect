@@ -1,6 +1,11 @@
 .searchb{
   padding-top: 10px;
 }
+
+body { 
+  padding-top: 60px; 
+}
+
 .btn-outline-success {
   color: #fff;
   background-color: #17b2ff;

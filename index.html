@@ -4,9 +4,9 @@
 
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="css/firstpage.css">
   <link rel="stylesheet" href="jquery\jquery-jvectormap-2.0.5.css">
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="jquery\jquery-3.6.4.js"></script>
   <script src="jquery\jquery-jvectormap-2.0.5.min.js"></script>
   <script src="map.js"></script>
@@ -16,41 +16,17 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><i class="bi bi-house">StartConnect</i></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="iscrizione.html">Iscriviti ad un evento</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="organizzazione.html">Organizza un evento</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contatti">Contatti</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">FAQ</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar -->
-  <div class="jumbotron">
-    <div class="container-2">
-      <h1 class="display-1">Benvenuti su StartConnect</h1>
-      <p>Siamo qui per offrire un'opportunità unica a tutti coloro che hanno una grande idea e vogliono condividerla con
-        gli altri. La nostra piattaforma permette di organizzare eventi in cui le persone possono incontrarsi, imparare
-        e creare nuove connessioni. Siamo convinti che la condivisione di idee innovative possa portare a grandi
-        cambiamenti, e siamo qui per supportare e promuovere questo processo.</p>
-    </div>
+  <!--Navigation bar-->
+  <div id="nav-placeholder">
   </div>
+  <script>
+    $(function(){
+      $("#nav-placeholder").load("nav.html");
+    });
+  </script>
+  <!--end of Navigation bar-->
+
+  <!-- Mappa -->
   <div class="map-container">
     <div class="row">
       <div class="col-md-4">
@@ -71,6 +47,8 @@
       </div>
     </div>
   </div>  
+
+  <!-- Forms -->
   <div id="frase">
     <div class="container">
       <h1 id="titolo">Le nostre Opportunità</h1>
@@ -88,6 +66,17 @@
           </a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Chi siamo -->
+  <div class="jumbotron">
+    <div class="container-2">
+      <h1 class="display-1"> About StartConnect</h1>
+      <p>Siamo qui per offrire un'opportunità unica a tutti coloro che hanno una grande idea e vogliono condividerla con
+        gli altri. La nostra piattaforma permette di organizzare eventi in cui le persone possono incontrarsi, imparare
+        e creare nuove connessioni. Siamo convinti che la condivisione di idee innovative possa portare a grandi
+        cambiamenti, e siamo qui per supportare e promuovere questo processo.</p>
     </div>
   </div>
   <div class="container-3" id="contatti">
