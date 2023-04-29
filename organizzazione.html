@@ -28,41 +28,46 @@
 
       <h1>Organizza un evento</h1>
 
-      <form>
+      <form action="addEvent.php" method="POST">
 
         <div class="form-group">
-          <label for="inputNomeEvento">Nome evento</label>
-          <input type="text" class="form-control " id="inputNomeEvento" placeholder="Inserisci il nome dell'evento">
+          <label for="inputNome">Nome evento</label>
+          <input type="text" class="form-control " id="inputNome" name="nome" placeholder="Inserisci il nome dell'evento">
         </div>
 
         <div class="form-group">
           <label for="inputOrganizzatore">Organizzatore</label>
-          <input type="text" class="form-control" id="inputOrganizzatore" placeholder="Inserisci il nome dell'organizzatore">
+          <input type="text" class="form-control" id="inputOrganizzatore" name="host" placeholder="Inserisci il nome dell'organizzatore">
         </div>
 
         <div class="form-group">
-          <label for="inputemail">Email</label>
-          <input type="text" class="form-control" id="inputEmail" placeholder="Inserisci l'email">
+          <label for="inputEmail">Email</label>
+          <input type="text" class="form-control" id="inputEmail" name="email" placeholder="Inserisci l'email">
         </div>
 
         <div class="form-group">
           <label for="inputIndirizzo">Indirizzo</label>
-          <input type="text" class="form-control" id="inputIndirizzo" placeholder="Inserisci l'indirizzo">
+          <input type="text" class="form-control" id="inputIndirizzo" name="indirizzo" placeholder="Inserisci l'indirizzo">
         </div>
 
         <div class="form-group">
           <label for="inputCitta">Città</label>
-          <input type="text" class="form-control" id="inputCitta" placeholder="Inserisci la città">
+          <input type="text" class="form-control" id="inputCitta" name="città" placeholder="Inserisci la città">
         </div>
 
         <div class="form-group">
           <label for="inputProvincia">Provincia</label>
-          <input type="text" class="form-control" id="inputProvincia" placeholder="Inserisci la provincia">
+          <input type="text" class="form-control" id="inputProvincia" name="provincia" placeholder="Inserisci la provincia">
+        </div>
+
+        <div class="form-group">
+          <label for="inputData">Data</label>
+          <input type="date" class="form-control" id="inputData" name="date" placeholder="Inserisci l'indirizzo">
         </div>
 
         <div class="form-group">
           <label for="inputDescrizione">Descrizione</label>
-          <textarea class="form-control" id="inputDescrizione" rows="3" placeholder="Inserisci la descrizione dell'evento"></textarea>
+          <textarea class="form-control" id="inputDescrizione" name="descrizione" rows="3" placeholder="Inserisci la descrizione dell'evento"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Aggiungi</button>
