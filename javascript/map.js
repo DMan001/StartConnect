@@ -15,17 +15,17 @@ setInterval(function() {
     url: "./php/updateEvent.php",
     type: "GET",
     dataType: "json",
-    success: function(locations) {
-      updateMap(locations);
+    success: function(dati) {
+      updateMap(dati);
     },
   });
 }, 300); // Fetch data every 0.3 seconds
 
-function updateMap(locations) {
+function updateMap(dati) {
   var map = $('#map').vectorMap('get', 'mapObject');
   map.removeAllMarkers();
-  for (var i = 0; i < locations.length; i++) {
-    var location = locations[i];
+  for (var i = 0; i < dati.length; i++) {
+    var location = dati[i];
     var marker = {
       name: location.nome,
       descrizione: location.descrizione,
