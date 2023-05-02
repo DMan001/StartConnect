@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="css/firstpage.css">
     <link rel="stylesheet" href="css/organizzazione.css">
     <script src="//code.jquery.com/jquery.min.js"></script>
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaBYPo-63bn8jwXT7aq13N8NSOflaAKxc&libraries=places&callback=initAutocomplete">
+    </script>
+    <script src="./javascript/mapsEvent.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
     
     <!--Navigation bar-->
     <script>
@@ -28,46 +35,38 @@
 
       <h1>Organizza un evento</h1>
 
-      <form action="addEvent.php" method="POST">
+      <form action="./php/addEvent.php" method="POST">
 
-        <div class="form-group">
-          <label for="inputNome">Nome evento</label>
+        <div class="form-floating">
           <input type="text" class="form-control " id="inputNome" name="nome" placeholder="Inserisci il nome dell'evento">
+          <label for="inputNome">Nome evento</label>
         </div>
 
-        <div class="form-group">
-          <label for="inputOrganizzatore">Organizzatore</label>
+        <div class="form-floating">
           <input type="text" class="form-control" id="inputOrganizzatore" name="host" placeholder="Inserisci il nome dell'organizzatore">
+          <label for="inputOrganizzatore">Organizzatore</label>
         </div>
 
-        <div class="form-group">
-          <label for="inputEmail">Email</label>
+        <div class="form-floating">
           <input type="text" class="form-control" id="inputEmail" name="email" placeholder="Inserisci l'email">
+          <label for="inputEmail">Email</label>
         </div>
 
-        <div class="form-group">
-          <label for="inputIndirizzo">Indirizzo</label>
+        <div class="form-floating">
           <input type="text" class="form-control" id="inputIndirizzo" name="indirizzo" placeholder="Inserisci l'indirizzo">
+          <label for="inputIndirizzo">Indirizzo</label>
         </div>
 
-        <div class="form-group">
-          <label for="inputCitta">Città</label>
-          <input type="text" class="form-control" id="inputCitta" name="città" placeholder="Inserisci la città">
-        </div>
+        <div id="map" style="width: 80%;" ></div>
 
-        <div class="form-group">
-          <label for="inputProvincia">Provincia</label>
-          <input type="text" class="form-control" id="inputProvincia" name="provincia" placeholder="Inserisci la provincia">
-        </div>
-
-        <div class="form-group">
+        <div class="form-floating">
+          <input type="date" class="form-control" id="inputData" name="data" placeholder="Inserisci l'indirizzo">
           <label for="inputData">Data</label>
-          <input type="date" class="form-control" id="inputData" name="date" placeholder="Inserisci l'indirizzo">
         </div>
-
-        <div class="form-group">
-          <label for="inputDescrizione">Descrizione</label>
+        
+        <div class="form-floating">
           <textarea class="form-control" id="inputDescrizione" name="descrizione" rows="3" placeholder="Inserisci la descrizione dell'evento"></textarea>
+          <label for="inputDescrizione">Descrizione</label>
         </div>
 
         <button type="submit" class="btn btn-primary">Aggiungi</button>

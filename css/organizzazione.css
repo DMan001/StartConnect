@@ -1,11 +1,11 @@
 .container-5{
-  padding-top:30px;
   display: flex;
   flex-direction: column;
 }
-.form-group{
+
+.form-floating{
   margin-left: 5px;
-  width:70%;
+  width:80%;
   margin-bottom:10px;
 }
 h1{
