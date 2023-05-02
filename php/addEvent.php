@@ -3,7 +3,7 @@
         or die("Errore di connessione:  . pg_last_error()");
         
     $indirizzo = $_POST["indirizzo"];
-    $arr = str_split($indirizzo);
+    $arr = explode(", ", $indirizzo);
     
     $param = array(
         "nome"      => $_POST["nome"],
