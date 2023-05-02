@@ -9,7 +9,7 @@
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="jquery\jquery-3.6.4.js"></script>
   <script src="jquery\jquery-jvectormap-2.0.5.min.js"></script>
-  <script src="map.js"></script>
+  <script src="javascript\map.js"></script>
   <script src="jquery\jquery-jvectormap-it-mill.js"></script>
   <title>StartConnect</title>
 </head>
@@ -20,7 +20,7 @@
   <div id="nav-placeholder">
   </div>
   <script>
-    $(function(){
+    $(function () {
       $("#nav-placeholder").load("nav.html");
     });
   </script>
@@ -31,22 +31,24 @@
     <div class="row">
       <div class="col-md-4">
         <div class="titolo-2-container">
-          <h2 id="titolo-2">Esplora i prossimi eventi:</h2>
           <form class="searchb mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <h2 class="title">Nome dell'evento</h3>
+              <div class="text-area-2">
+                <p class="content" id="nome"></p>
+              </div>
+              <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
           </form>
-          <h3 class="title">Descrizione dell'evento</h3>
-          <div class="text-area">
-            <p class="content" id="text-content"></p>
-          </div>
+          <h2 class="title">Descrizione dell'evento</h3>
+            <div class="text-area">
+              <p class="content" id="text-content"></p>
+            </div>
         </div>
       </div>
       <div class="col-md-8">
         <div id="map"></div>
       </div>
     </div>
-  </div>  
+  </div>
 
   <!-- Forms -->
   <div id="frase">

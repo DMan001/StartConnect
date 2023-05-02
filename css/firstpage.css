@@ -163,6 +163,16 @@ h2{
    border: 1px solid #2196F3;
    height: 35vh;
 }
+.text-area-2{
+  margin-left: 5px;
+  margin-top: 10px;
+  padding-bottom: 30px;
+  background-color: #ccc;
+  z-index: 2;
+  background-color: white;
+   border: 1px solid #2196F3;
+   height: 5vh;
+}
 .title{
   margin-top: 20px;
   color: #2196F3;
