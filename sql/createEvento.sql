@@ -5,9 +5,11 @@ create table evento (
 	host		varchar(40),
 	email		varchar,
 	via			varchar,
-	civico		int,
+	civico		integer,
 	città		varchar(40),
 	provincia	varchar(40),
 	data		date,
+	latitudine	float,
+	longitudine	float,
 	descrizione	text
 );
