@@ -136,10 +136,10 @@ h2{
   #map {
     background-color: #eee7e7b6;
     width: 100%;
-    height: 40vh; 
+    height: 43vh; 
   }
   .titolo-2-container{
-    height:45vh;
+    height:43vh;
   }
 }
 @media (max-width: 1200px) and  (min-width: 800px){
@@ -166,19 +166,19 @@ h2{
 
 .text-area{
   margin-left: 5px;
-  margin-top: 10px;
-  padding-bottom: 30px;
+  margin-top: 6px;
+  padding-bottom: 3vh;
   background-color: #ccc;
   z-index: 2;
   background-color: white;
    border: 1px solid #2196F3;
-   height: 35vh;
+   height: 23vh;
    overflow: auto;
 }
 .text-area-2{
   margin-left: 5px;
-  margin-top: 10px;
-  padding-bottom: 30px;
+  margin-top: 3px;
+  padding-bottom: 3vh;
   background-color: #ccc;
   z-index: 2;
   background-color: white;
@@ -187,9 +187,9 @@ h2{
    overflow: auto;
 }
 .title{
-  margin-top: 20px;
+  margin-top: 2vh;
   color: #2196F3;
-  font-size: 25px;
+  font-size: 22px;
   font-family: Arial, sans-serif;
   text-align: center;
   font-weight: bold;
