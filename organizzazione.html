@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html >
   <head>
-    <meta charset="UTF-8">
-    <title>Form Evento</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -36,39 +34,39 @@
       
       <form action="./php/addEvent.php" method="POST">
         <div class="form-floating">
-          <input  type="text" class="form-control" id="inputNome" 
-                  name="nome" placeholder="Inserisci il nome dell'evento">
+          <input  placeholder="Inserisci il nome dell'evento" type="text" 
+                  class="form-control"name="nome" >
           <label>Nome evento</label>
         </div>
 
         <div class="form-floating">
-          <input  type="text" class="form-control" id="inputOrganizzatore" 
+          <input  class="form-control" type="text"
                   name="host" placeholder="Inserisci il nome dell'organizzatore">
           <label>Organizzatore</label>
         </div>
 
         <div class="form-floating">
-          <input  type="text" class="form-control" id="inputEmail" 
+          <input  type="text" class="form-control" 
                   name="email" placeholder="Inserisci l'email">
           <label>Email</label>
         </div>
 
         <div class="form-floating">
-          <input  type="text" class="form-control" id="inputIndirizzo" 
-                  name="indirizzo" placeholder="Inserisci l'indirizzo">
+          <input  type="text" name="indirizzo"
+                  class="form-control" placeholder="Inserisci l'indirizzo" id="indirizzo">
           <label>Indirizzo</label>
         </div>
 
         <div id="map" style="width: 80%;" ></div>
 
         <div class="form-floating">
-          <input  type="date" class="form-control" id="inputData" 
+          <input  type="date" class="form-control"
                   name="data" placeholder="Inserisci l'indirizzo">
           <label >Data</label>
         </div>
 
         <div class="form-floating">
-          <textarea class="form-control" id="inputDescrizione" name="descrizione" rows="3" placeholder="Inserisci la descrizione dell'evento"></textarea>
+          <textarea class="form-control"  name="descrizione" rows="3" placeholder="Inserisci la descrizione dell'evento"></textarea>
           <label>Descrizione</label>
         </div>
         
