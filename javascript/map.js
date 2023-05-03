@@ -19,23 +19,23 @@ setInterval(function() {
     type: "GET",
     dataType: "json",
     success: function(dati) {
-      updateMap(dati);
+      aggiungimarker(dati);
     },
   });
 }, 300); 
 
 // aggiorna posizione dei marker sulla mappa
-function updateMap(dati) {
+function aggiungimarker(dati) {
   var map = $('#map').vectorMap('get', 'mapObject');
   
   map.removeAllMarkers();
   for (var i = 0; i < dati.length; i++) {
-    var location = dati[i];
+    var posizione = dati[i];
     
     var marker = {
-      name: location.nome,
-      descrizione: location.descrizione,
-      latLng: [location.latitudine, location.longitudine],
+      name: posizione.nome,
+      descrizione: posizione.descrizione,
+      latLng: [posizione.latitudine, posizione.longitudine],
       style: {
         fill: 'yellow',
         stroke: 'black',
