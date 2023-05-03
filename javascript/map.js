@@ -29,8 +29,8 @@ function aggiungimarker(dati) {
   var map = $('#map').vectorMap('get', 'mapObject');
   
   map.removeAllMarkers();
-  for (var i = 0; i < dati.length; i++) {
-    var posizione = dati[i];
+  for (var id = 0; id < dati.length; id++) {
+    var posizione = dati[id];
     
     var marker = {
       name: posizione.nome,
@@ -44,9 +44,9 @@ function aggiungimarker(dati) {
       },
     };
 
-  map.addMarker(i, marker);
+  map.addMarker(id, marker);
   
-  var markerElement = $('#map').find('.jvectormap-marker[data-index="' + i + '"]');   // aggiunge attributi ai marker
+  var markerElement = $('#map').find('.jvectormap-marker[data-index="' + id + '"]');   // aggiunge attributi ai marker
   $(markerElement).data('style', marker.style);
   $(markerElement).data('name', marker.name);
   $(markerElement).data('descrizione', marker.descrizione);   
