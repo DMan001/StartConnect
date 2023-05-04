@@ -4,46 +4,49 @@
 
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/firstpage.css">
-  <link rel="stylesheet" href="jquery\jquery-jvectormap-2.0.5.css">
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="jquery\jquery-3.6.4.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="jquery\jquery-jvectormap-2.0.5.min.js"></script>
+  
   <script src="javascript\map.js"></script>
+  
+  <link rel="stylesheet" href="jquery\jquery-jvectormap-2.0.5.css">
   <script src="jquery\jquery-jvectormap-it-mill.js"></script>
+  
+  <link rel="stylesheet" href="css/index.css">
+  
   <title>StartConnect</title>
 </head>
 
 <body>
   <!-- Navbar -->
-  <div id="nav-placeholder">
+  <div id="navbar">
   </div>
   <script>
     $(function () {
-      $("#nav-placeholder").load("nav.html");
+      $("#navbar").load("nav.html");
     });
   </script>
 
-  <!-- Mappa -->
-  <div class="map-container">
+  <!-- Main Service -->
+  <div class="main">
     <div class="row">
       <div class="col-md-4">
         
-        <div class="titolo-2-container">
+        <div class="form">
           <h2 class="title">Nome dell'evento</h3>
-          <div id="text-area-2">
+          <div class="text-area">
             <p class="content" id="nome"></p>
           </div>
 
-          <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
           <h2 class="title">Descrizione dell'evento</h3>
-          <div id="text-area">
+          <div class="text-area">
             <p class="content" id="text-content"></p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-8">
+      <div class="map-container">
         <div id="map"></div>
       </div>
 
@@ -51,39 +54,36 @@
   </div>
 
   <!-- Forms -->
-  <div id="frase">
-    <div class="container">
-      <h1 class="titolo">Le nostre Opportunità</h1>
-      <div class="row">
-        
-        <div class="col">
-          <h3 class="opportunita">Alla Ricerca di nuove idee?</h3>
-          <a href="iscrizione.html">
-            <img src="images/img2.jpg"  class="img-show">
-          </a>
-        </div>
-        
-        <div class="col">
-          <h3 class="opportunita">Hai un'idea geniale in mente?</h3>
-          <a href="organizzazione.html">
-            <img src="images/idea.jpg" class="img-show">
-          </a>
-        </div>
-
+  <div class="container" id="forms">
+    <h1 class="titolo">Le nostre Opportunità</h1>
+    <div class="row">
+      
+      <div class="col">
+        <h3 class="opportunita">Alla Ricerca di nuove idee?</h3>
+        <a href="iscrizione.html">
+          <img src="images/img2.jpg" width="500px">
+        </a>
       </div>
+      
+      <div class="col">
+        <h3 class="opportunita">Hai un'idea geniale in mente?</h3>
+        <a href="organizzazione.html">
+          <img src="images/idea.jpg" width="500px">
+        </a>
+      </div>
+
     </div>
   </div>
 
   <!-- Chi siamo -->
   <div class="jumbotron">
-    <div class="container-2">
-      <h1 class="titolo"> About StartConnect</h1>
-      <p>Siamo qui per offrire un'opportunità unica a tutti coloro che hanno una grande idea e vogliono condividerla con
-        gli altri. La nostra piattaforma permette di organizzare eventi in cui le persone possono incontrarsi, imparare
-        e creare nuove connessioni. Siamo convinti che la condivisione di idee innovative possa portare a grandi
-        cambiamenti, e siamo qui per supportare e promuovere questo processo.</p>
-    </div>
+    <h1 class="titolo"> About StartConnect</h1>
+    <p>Siamo qui per offrire un'opportunità unica a tutti coloro che hanno una grande idea e vogliono condividerla con
+      gli altri. La nostra piattaforma permette di organizzare eventi in cui le persone possono incontrarsi, imparare
+      e creare nuove connessioni. Siamo convinti che la condivisione di idee innovative possa portare a grandi
+      cambiamenti, e siamo qui per supportare e promuovere questo processo.</p>
   </div>
+
 
   <div id="contatti">
     <div class="row">

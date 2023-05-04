@@ -1,28 +1,75 @@
+<head>
+  <link rel="stylesheet" href="css/nav.css">
+</head>
+
 <body>
-<nav class="navbar fixed-top navbar-expand-lg">
-    <div class="container-fluid">
-      
-      <a class="navbar-brand" href="index.html"><i class="bi bi-house">StartConnect</i></a>
-      <button class="navbar-toggler" data-bs-target="#mynav" data-bs-toggle="collapse" type="button"  >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="mynav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="iscrizione.html">Iscriviti ad un evento</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="organizzazione.html">Organizza un evento</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#contatti">Contatti</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">FAQ</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">StartConnect</a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+    <ul class="navbar-nav ms-auto mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="iscrizione.html">Iscriviti ad un evento</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="organizzazione.html">Organizza un evento</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html#contatti">Contatti</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="faq.html">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="myArea.html">Area Personale</a>
+      </li>
+
+
+			<div class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" class="dropdown-toggle" href="#">Login</a>
+				<div class="dropdown-menu dropdown-menu-end">					
+          <form action="#" method="post">   
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" required="required">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" required="required">
+            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Login">
+            <div class="form-footer">
+              <a href="#">Forgot Your password?</a>
+            </div>
+          </form>
+				</div>
+			</div>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
+				<ul class="dropdown-menu dropdown-menu-end form-wrapper">					
+					<li>
+						<form action="/examples/actions/confirmation.php" method="post">
+							<p class="hint-text">Fill in this form to create your account!</p>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username" required="required">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password" required="required">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Confirm Password" required="required">
+							</div>
+							<div class="form-group">
+								<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
+							</div>
+							<input type="submit" class="btn btn-primary btn-block" value="Sign up">
+						</form>
+					</li>
+				</ul>
+			</li>
+		</ul>
+  </div>
 </nav>
 </body>

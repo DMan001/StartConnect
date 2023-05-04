@@ -1,0 +1,60 @@
+/* cerca di ordinara in modo alfabetico */
+
+body {
+    color: #000;
+}
+
+.form {
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+#forms {
+    padding-top: 20px;
+}
+
+.jumbotron {
+    padding:  10px;
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    /* background-color: #ccc; */
+}
+
+#map {
+    z-index: 1;
+    height: 100vh ;
+    width: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.text-area{
+    margin-left: 5px;
+    margin-top: 6px;
+    padding-bottom: 3vh;
+    background-color: #ccc;
+    z-index: 2;
+    background-color: white;
+    border: 1px solid #2196F3;
+    height: 23vh;
+    overflow: auto;
+  }
+
+.title{
+    margin-top: 2vh;
+    color: #e76f51;
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+

@@ -1,0 +1,27 @@
+.dropdown-menu ul li p {
+    padding: 2px ;
+    position: relative;
+    right: 0;
+}
+
+.navbar {
+    background-color: #e9c46a;
+    height: 60px;
+  }
+
+  .navbar-collapse {
+    background-color: #e9c46a;
+  }
+  .nav-link{
+    color:azure;
+    font-size: 18px; 
+    font-family: Arial, sans-serif;
+    margin-right: 10px;
+  }
+  .nav-link:hover{
+    color:#ade8f4;
+  }
+
+  .navbar-brand {
+    padding-left: 2rem;
+  }

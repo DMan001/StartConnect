@@ -2,7 +2,11 @@
 $(function() {
   $('#map').vectorMap({
     map: 'it_mill',
-    backgroundColor: '#ccc',
+    backgroundColor: '#264653',
+    size: {
+      height: 300,
+      width: 00
+    },
     series: {
       regions: [{
         values: {
