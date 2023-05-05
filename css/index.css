@@ -1,60 +1,129 @@
-/* cerca di ordinara in modo alfabetico */
+/* cerca di ordinare in modo alfabetico */
 
 body {
-    color: #000;
+    background-color: #cff1ff;
+    display: flex;
+    flex-flow: column wrap;
 }
 
-.form {
-    position: absolute;
-    top: 30%;
-    left: 10px;
-    z-index: 2;
-    opacity: 0.9;
+.card {
+    margin: 10px;
+}
+
+.card-title {
+    font-style: italic;
+}
+
+.card-body {
+    font-size: 18px;
 }
 
 #forms {
-    padding-top: 20px;
+    background-color: #bcb7b7;
+    width: 100%;
+}
+
+#forms .row {
+    display: flex;
+    flex-flow: wrap row;
+    flex-grow: 1;
+}
+
+#form{
+  margin: auto;
+}
+
+img {
+    float: left;
+    height: 500px;
+    object-fit: cover;
+    width:  500px;
 }
 
 .jumbotron {
     padding:  10px;
 }
 
-.main {
-    position: relative;
-    height: 100vh;
-    /* background-color: #ccc; */
+#main {
+    height: 94vh;
+    padding: 10px;
 }
 
 #map {
-    z-index: 1;
-    height: 100vh ;
-    width: 100vh;
+    border-radius: 8px;
+    border: 5px solid cyan;
+    height: 90vh;
+    width: 100%;
 }
 
 .row {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: rwrap;
+    flex-grow: 1;
 }
 
 .text-area{
-    margin-left: 5px;
-    margin-top: 6px;
-    padding-bottom: 3vh;
     background-color: #ccc;
-    z-index: 2;
     background-color: white;
     border: 1px solid #2196F3;
-    height: 23vh;
+    height: 30px;
+    margin:auto;
     overflow: auto;
-  }
+    width: 80%;
+    z-index: 2;
+}
 
 .title{
-    margin-top: 2vh;
-    color: #e76f51;
-    font-size: 22px;
+    color: #453532;
     font-family: Arial, sans-serif;
-    text-align: center;
+    font-size: 22px;
     font-weight: bold;
-  }
+    margin-top: 2vh;
+    text-align: center;
+}
 
+@media (max-width: 1200px) {
+    
+    #map {
+        height: 45vh;
+        width: 100%;
+    }
+}
+
+
+/*  ALTRE @MEDIA dello scorso file, penso non necessarie
+@media (max-width: 800px) {
+    
+    #map {
+      background-color: #eee7e7b6;
+      height: 43vh;
+      width: 100%;
+  }
+    .titolo-2-container{
+      height:43vh;
+  }
+}
+  @media (max-width: 1200px) and  (min-width: 800px){
+    
+    #map {
+      background-color: #eee7e7b6;
+      height: 390px;
+      width: 100%;
+  }
+}
+  @media (min-width: 1200px) and (max-width: 1350px) {
+    
+    #map {
+      background-color: #eee7e7b6;
+      height: 450px;
+      width: 100%;
+  }
+}
+  @media (min-width: 1350px) {
+    
+    #map {
+      background-color: #eee7e7b6;
+      height: 550px;
+      width: 100%;
+  }
+} */

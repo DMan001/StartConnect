@@ -1,27 +1,27 @@
+.navbar {
+    background-color: #17b2ff;
+    padding-left: 10px;
+    height: 80px;
+}
+
+.navbar-collapse {
+  padding-right: 10px;
+}
+
+.nav-link{
+    font-size: 20px; 
+    font-family: Arial, sans-serif;
+    margin: 5px;
+    color:azure;
+}
+
 .dropdown-menu ul li p {
     padding: 2px ;
     position: relative;
     right: 0;
 }
 
-.navbar {
-    background-color: #e9c46a;
-    height: 60px;
-  }
-
-  .navbar-collapse {
-    background-color: #e9c46a;
-  }
-  .nav-link{
-    color:azure;
-    font-size: 18px; 
-    font-family: Arial, sans-serif;
-    margin-right: 10px;
-  }
-  .nav-link:hover{
-    color:#ade8f4;
-  }
-
-  .navbar-brand {
-    padding-left: 2rem;
-  }
+.navbar-brand {
+  color: aliceblue;
+  font-size: 40px;
+}

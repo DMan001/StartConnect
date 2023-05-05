@@ -29,28 +29,32 @@
   </script>
 
   <!-- Main Service -->
-  <div class="main">
-    <div class="row">
-      <div class="col-md-4">
-        
-        <div class="form">
-          <h2 class="title">Nome dell'evento</h3>
-          <div class="text-area">
-            <p class="content" id="nome"></p>
-          </div>
+  <div class="row" id="main">
+    <div class="col-md-4" id="form">
+      <form>
+        <p class="title">Cerca evento:</p>
+        <input class="shadow text-area" id="nome" type="text">
+        <br>
+        <p class="title">Cerca con i TAG:</p>
+        <input class="shadow text-area" id="text-content" type="text">
 
-          <h2 class="title">Descrizione dell'evento</h3>
-          <div class="text-area">
-            <p class="content" id="text-content"></p>
-          </div>
-        </div>
+      </form>
+
+      <h2 class="title">Nome dell'evento cliccato</h3>
+      <div class="text-area">
+        <p class="content" id="nome"></p>
       </div>
 
-      <div class="map-container">
-        <div id="map"></div>
+      <h2 class="title">Descrizione dell'evento cliccato</h3>
+      <div class="text-area">
+        <p class="content" id="text-content"></p>
       </div>
-
     </div>
+
+    <div class="col-md-8">
+      <div class="shadow" id="map"></div>
+    </div>
+
   </div>
 
   <!-- Forms -->
@@ -59,14 +63,14 @@
     <div class="row">
       
       <div class="col">
-        <h3 class="opportunita">Alla Ricerca di nuove idee?</h3>
+        <h3 id="opportunita">Alla Ricerca di nuove idee?</h3>
         <a href="iscrizione.html">
           <img src="images/img2.jpg" width="500px">
         </a>
       </div>
       
       <div class="col">
-        <h3 class="opportunita">Hai un'idea geniale in mente?</h3>
+        <h3>Hai un'idea geniale in mente?</h3>
         <a href="organizzazione.html">
           <img src="images/idea.jpg" width="500px">
         </a>
@@ -77,35 +81,33 @@
 
   <!-- Chi siamo -->
   <div class="jumbotron">
-    <h1 class="titolo"> About StartConnect</h1>
-    <p>Siamo qui per offrire un'opportunità unica a tutti coloro che hanno una grande idea e vogliono condividerla con
-      gli altri. La nostra piattaforma permette di organizzare eventi in cui le persone possono incontrarsi, imparare
-      e creare nuove connessioni. Siamo convinti che la condivisione di idee innovative possa portare a grandi
-      cambiamenti, e siamo qui per supportare e promuovere questo processo.</p>
+    <h1 class="display-4"> About StartConnect</h1>
+    <hr class="my-4">
+    <p class="lead" style="white-space: pre-line; font-size: 22px">Siamo qui per offrire un'opportunità unica a tutti coloro che hanno una grande idea e vogliono condividerla con gli altri. 
+      La nostra piattaforma permette di organizzare eventi in cui le persone possono incontrarsi, imparare e creare nuove connessioni. 
+      Siamo convinti che la condivisione di idee innovative possa portare a grandi cambiamenti, e siamo qui per supportare e promuovere questo processo.</p>
   </div>
 
 
-  <div id="contatti">
+  <div class="jumbotron" id="contatti">
     <div class="row">
       
       <div class="col-12 text-center">
-        <h3>Creata e Amministrata da</h3>
+        <h3 class="display-6">Creata e Amministrata da</h3>
       </div>
       <div class="col-md-6 text-center">
-        <div class="col-12 text-center">
-          <div class="card border-primary mb-3">
-            <div class="card-header  text-white">
-              <h4 class="card-title">Andrea De Carlo</h4>
-            </div>
-            <div class="card-body">
-              <p>Contatto: decarlo.1943362@studenti.uniroma1.it</p>
-            </div>
+        <div class="card border-primary mb-3">
+          <div class="card-header  text-black">
+            <h4 class="card-title">Andrea De Carlo</h4>
+          </div>
+          <div class="card-body">
+            <p>Contatto: decarlo.1943362@studenti.uniroma1.it</p>
           </div>
         </div>
       </div>
       <div class="col-md-6 text-center">
         <div class="card border-primary mb-3">
-          <div class="card-header  text-white">
+          <div class="card-header  text-black">
             <h4 class="card-title">Davide Caronna</h4>
           </div>
           <div class="card-body">

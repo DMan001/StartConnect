@@ -3,8 +3,8 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">StartConnect</a>
+<div class="navbar navbar-expand-lg navbar-light" id="navbar">
+  <a class="navbar-brand nav-link" href="index.html">StartConnect</a>
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -39,30 +39,28 @@
             <div class="form-group">
               <input type="password" class="form-control" placeholder="Password" required="required">
             </div>
-            <input type="submit" class="btn btn-primary btn-block" value="Login">
-            <div class="form-footer">
-              <a href="#">Forgot Your password?</a>
+            <div class="form-group">
+              <input type="checkbox" id="rmb" name="remember">
+              <label for="rmb">Ricordami</label>
             </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Login">
           </form>
 				</div>
 			</div>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
+				<a id="login" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
 				<ul class="dropdown-menu dropdown-menu-end form-wrapper">					
 					<li>
-						<form action="/examples/actions/confirmation.php" method="post">
+						<form action="php/signup.php" method="post">
 							<p class="hint-text">Fill in this form to create your account!</p>
+              <div class="form-group">
+                <input type="text" name="inputUsername" class="form-control" placeholder="Username" required="required">
+              </div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Username" required="required">
+                <input type="text" name="inputEmail" class="form-control" placeholder="Email" required="required">
 							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" placeholder="Password" required="required">
-							</div>
-							<div class="form-group">
-								<input type="password" class="form-control" placeholder="Confirm Password" required="required">
-							</div>
-							<div class="form-group">
-								<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
+								<input type="password" name="inputPassword" class="form-control" placeholder="Password" required="required">
 							</div>
 							<input type="submit" class="btn btn-primary btn-block" value="Sign up">
 						</form>
@@ -71,5 +69,5 @@
 			</li>
 		</ul>
   </div>
-</nav>
+</div>
 </body>
