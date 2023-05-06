@@ -110,7 +110,8 @@ input {
 }
 
 #text-content{
-  height:15vh;
+    height:15vh;
+    max-width: 100px;
 }
 
 .title{
