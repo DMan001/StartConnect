@@ -102,7 +102,7 @@ input {
     background-color: #ccc;
     background-color: white;
     border: 1px solid #2196F3;
-    font-size: 1.25vmax;
+    font-size: max(1.25vmax,10px);
     margin:auto;
     overflow: auto;
     width: 80%;
