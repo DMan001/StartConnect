@@ -44,6 +44,12 @@ img {
     padding:  10px;
 }
 
+.jvectormap-marker:hover{
+  fill: #f34821;
+  r:8;
+  stroke-width: 4,
+}
+
 #main {
     height: 94vh;
     padding: 10px;

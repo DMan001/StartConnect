@@ -13,9 +13,8 @@ $(function() {
   });
 });
 
-// Fetch data every 0.3 seconds
-setInterval(function() {
-  $.ajax({
+// carica i dati dal database
+$.ajax({
     url: "./php/updateEvent.php",
     type: "GET",
     dataType: "json",
@@ -23,7 +22,10 @@ setInterval(function() {
       aggiungimarker(dati);
     },
   });
-}, 300); 
+
+// array globale per mantenere markers
+var markers = [];
+var markelements = [];
 
 // aggiorna posizione dei marker sulla mappa
 function aggiungimarker(dati) {
@@ -45,14 +47,17 @@ function aggiungimarker(dati) {
       },
     };
 
-  map.addMarker(id, marker);
-  
-  var markerElement = $('#map').find('.jvectormap-marker[data-index="' + id + '"]');   // aggiunge attributi ai marker
-  $(markerElement).data('style', marker.style);
-  $(markerElement).data('name', marker.name);
-  $(markerElement).data('descrizione', marker.descrizione);   
-  
-  $(markerElement).click(function() {
+    map.addMarker(id, marker);
+    var markerElement = $('#map').find('.jvectormap-marker[data-index="' + id + '"]');   // aggiunge attributi ai marker
+    $(markerElement).data('style', marker.style);
+    $(markerElement).data('name', marker.name);
+    $(markerElement).data('descrizione', marker.descrizione);
+
+    markers.push(marker.name);
+    markelements.push(markerElement);   // array per mantenere markerElement
+
+
+    $(markerElement).click(function() {
     var descrizione= $(this).data('descrizione');
     var name = $(this).data('name');
     $('#text-content').html(descrizione);
@@ -60,6 +65,45 @@ function aggiungimarker(dati) {
   });
   }
 }
+
+// aggiorna mappa in base a input utente
+$(document).ready(function() {
+  $('#bar').keyup(function() {
+    var input= $(this).val();
+    filtra(input);
+  });
+});
+
+// funzione per filtrare i marker
+function filtra(input) {
+  threshold = {
+  keys: ['name'],
+  threshold: 0.1
+  };
+  oggetti = markers.map(name =>({name}));
+  const fuse = new Fuse(oggetti,threshold);
+  risultati = fuse.search(input);
+  nomi = risultati.map(element=>element.item.name);
+  if(input==''){
+    for(j=0; j<markelements.length ; j++){
+      markelements[j].show();
+    }
+    return true;
+  }
+  for (i=0;i<markelements.length;i++) {
+    if(nomi.includes(markelements[i].data('name'))){
+      markelements[i].show();
+    }
+    else{
+      markelements[i].hide();
+    }
+  }
+}
+
+
+
+
+
 
 
 
