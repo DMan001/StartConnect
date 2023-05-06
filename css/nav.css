@@ -1,27 +1,40 @@
+.dropdown-menu {
+  margin: 1vw;
+}
+
 .navbar {
     background-color: #17b2ff;
-    padding-left: 10px;
-    height: 80px;
+    width: 100vw;
+    height: 8vh;
+    z-index: 100;
 }
 
 .navbar-collapse {
-  padding-right: 10px;
+  background-color: inherit;
+  z-index: 1;
 }
 
 .nav-link{
-    font-size: 20px; 
+    font-size: 1.35vmax; 
     font-family: Arial, sans-serif;
-    margin: 5px;
+    margin: 0.2vw;
     color:azure;
 }
 
+.navbar-toggler {
+  margin-right: 1vw;
+}
+
 .dropdown-menu ul li p {
-    padding: 2px ;
     position: relative;
     right: 0;
 }
 
 .navbar-brand {
   color: aliceblue;
-  font-size: 40px;
+  font-size: 4vh;
+  margin-left: 1vw;
+  height: 100%;
+  padding: auto;
+  text-align: center;
 }

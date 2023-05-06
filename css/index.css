@@ -2,12 +2,10 @@
 
 body {
     background-color: #cff1ff;
-    display: flex;
-    flex-flow: column wrap;
 }
 
 .card {
-    margin: 10px;
+    margin: 1vw;
 }
 
 .card-title {
@@ -15,29 +13,49 @@ body {
 }
 
 .card-body {
-    font-size: 18px;
+    font-size: 1em;
 }
 
-#forms {
-    background-color: #bcb7b7;
-    width: 100%;
-}
-
-#forms .row {
-    display: flex;
-    flex-flow: wrap row;
-    flex-grow: 1;
+#cerca {
+  margin-top: 15vh;
 }
 
 #form{
-  margin: auto;
+  background-color: #98d0fe;
+  grid-area: a;
+}
+
+#forms {
+    background-color: #fffff9;
+    padding-top: 10px;
+}
+
+#forms > #row{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+}
+
+#forms .titolo {
+  text-align: center;
 }
 
 img {
-    float: left;
-    height: 500px;
-    object-fit: cover;
-    width:  500px;
+  display: block;
+  float: left;
+  height: 50vh;
+  object-fit: cover;
+  width:  40vw;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: 5px solid red
+}
+
+input {
+  width: 70%;
+  margin-left: 15%;
 }
 
 .jumbotron {
@@ -51,50 +69,58 @@ img {
 }
 
 #main {
-    height: 94vh;
-    padding: 10px;
+  width: 100%;
+  height: 94vh;
+  display: grid;
+  grid-template: 'a b b';
+}
+
+#map-container {
+  grid-area: b;
+  background-color: #2196F3;
 }
 
 #map {
-    border-radius: 8px;
-    border: 5px solid cyan;
-    height: 90vh;
-    width: 100%;
+  border: #453532;
+  margin-top: 10px;
+  height: 88vh;
+  width: 70vw;
 }
 
-.row {
-    display: flex;
-    flex-flow: rwrap;
-    flex-grow: 1;
+.jvectormap-container {
+  width: 100%;
+  height: 100%;
 }
 
 .text-area{
     background-color: #ccc;
     background-color: white;
     border: 1px solid #2196F3;
+    font-size: 1.5vmax;
     height: 30px;
     margin:auto;
     overflow: auto;
     width: 80%;
+    height: 3em;
     z-index: 2;
 }
 
 .title{
     color: #453532;
     font-family: Arial, sans-serif;
-    font-size: 22px;
+    font-size: 3vmin;
     font-weight: bold;
     margin-top: 2vh;
     text-align: center;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     
     #map {
         height: 45vh;
         width: 100%;
     }
-}
+} */
 
 
 /*  ALTRE @MEDIA dello scorso file, penso non necessarie
