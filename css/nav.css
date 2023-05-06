@@ -4,8 +4,8 @@
 
 .navbar {
     background-color: #17b2ff;
-    width: 100vw;
-    height: 8vh;
+    width: 100%;
+    position: fixed;
     z-index: 100;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .nav-link{
-    font-size: 1.35vmax; 
+    font-size: max(1.35vmax, 11px);
     font-family: Arial, sans-serif;
     margin: 0.2vw;
     color:azure;

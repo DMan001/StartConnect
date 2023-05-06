@@ -2,6 +2,7 @@
 
 body {
     background-color: #cff1ff;
+    overflow-x: hidden;
 }
 
 .card {
@@ -27,7 +28,7 @@ body {
 
 #forms {
     background-color: #fffff9;
-    padding-top: 10px;
+    padding-top: 55px;
 }
 
 #forms > #row{
@@ -73,6 +74,7 @@ input {
   height: 94vh;
   display: grid;
   grid-template: 'a b b';
+  padding-top: 55px;
 }
 
 #map-container {
