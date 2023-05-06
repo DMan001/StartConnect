@@ -32,7 +32,10 @@
     $res = pg_insert($dbconn, 'evento', $param);
 
     if ($res) {
-        echo "POST data is successfully logged\n";
+        echo '<script>';
+        echo 'alert("Complimenti per aver organizzato un evento!");';
+        echo 'window.location.href = "../organizzazione.html";';
+        echo '</script>';
     } else {
         echo "User must have sent wrong inputs\n";
     }
