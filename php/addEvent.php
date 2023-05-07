@@ -1,4 +1,9 @@
 <?php
+    echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>';
+    echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">';
+
+    error_reporting(E_ERROR | E_PARSE);
+    
     $dbconn = pg_connect("host=localhost password=biar user=postgres port=5432 dbname=StartConnect") 
         or die("Errore di connessione:  . pg_last_error()");
         
@@ -32,10 +37,17 @@
     $res = pg_insert($dbconn, 'evento', $param);
 
     if ($res) {
-        echo '<script>';
-        echo 'alert("Complimenti per aver organizzato un evento!");';
-        echo 'window.location.href = "../organizzazione.html";';
-        echo '</script>';
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+              icon: 'success',
+              title: 'Success!',
+              text: 'Evento aggiunto con successo!'
+            }).then(() => {
+              window.location.href = '../organizzazione.html';
+            });
+          });
+      </script>";
     } else {
         echo "User must have sent wrong inputs\n";
     }
