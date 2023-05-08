@@ -21,6 +21,10 @@ body {
   margin-top: 8vh;
 }
 
+.content {
+  margin-left: 3px;
+}
+
 #form{
   background-color: #98d0fe;
   grid-area: a;

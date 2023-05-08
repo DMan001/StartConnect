@@ -67,8 +67,8 @@ function aggiungimarker(dati) {
 }
 
 // aggiorna mappa in base a input utente
-$(document).ready(function() {
-  $('#bar').keyup(function() {
+$(document).ready(function() {    // esegue all'avvio del DOM
+  $('#bar').keyup(function() {    
     var input= $(this).val();
     filtra(input);
   });

@@ -30,7 +30,7 @@
             $param = array(
                 "username"   => $_POST['inputUsername'],
                 "email"      => $_POST['inputEmail'],
-                "password"   => password_hash($_POST['inputPassword'], PASSWORD_DEFAULT)
+                "password"   => password_hash($_POST['inputPassword'], 1)
             );
             
             $res = pg_insert($dbconn, "utente", $param);
