@@ -5,8 +5,10 @@
 .navbar {
     background-color: #17b2ff;
     width: 100%;
-    position: fixed;
     z-index: 100;
+    position: fixed;
+    height: max(8vh, 60px);
+
 }
 
 .navbar-collapse {

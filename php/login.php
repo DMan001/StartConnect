@@ -1,8 +1,11 @@
 <?php
+session_start();
 
+// script per fancy alert
 echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>';
 echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">';
 
+// chiamata al Database per verificare validità password inserita
 $dbconn = pg_connect("host=localhost port=5432 dbname=StartConnect 
             user=postgres password=biar") 
             or die('Could not connect: ' . pg_last_error());
@@ -18,7 +21,7 @@ if  ($dbconn) {
     else {
         $password = $_POST['inputPasswordLogin'];
 
-        $q2 = "SELECT password FROM utente WHERE email=$1";
+        $q2 = "SELECT username, password FROM utente WHERE email=$1";
         $result = pg_query_params($dbconn, $q2, array($email));
         if (!$result) {
             // errore nella query
@@ -33,6 +36,7 @@ if  ($dbconn) {
         if (password_verify($password, $password_hash)) {
             // success
             echo "<script>
+                sessionStorage.setItem('username', '" . $row['username'] . "');
                 document.addEventListener('DOMContentLoaded', function() {
                     Swal.fire({
                       icon: 'success',
