@@ -1,9 +1,10 @@
 <head>
   <link rel="stylesheet" href="css/nav.css">
+  <script src="javascript/login.js"></script>
 </head>
 
-<body>
-<nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+<body onload="">
+<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="navbar">
   <a class="navbar-brand" href="index.html">StartConnect</a>
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +27,7 @@
 			<div class="nav-item dropdown">
 				<a id="login" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" class="dropdown-toggle">Login</a>
 				<div class="dropdown-menu dropdown-menu-end">					
-          <form action="php/login.php" method="post">   
+          <form id="login-form" action="php/login.php" method="post">   
             <div class="form-group">
               <input type="text" name="inputEmailLogin" class="form-control" placeholder="Email" style="width:80%;" required="required">
             </div>
