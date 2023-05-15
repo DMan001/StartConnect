@@ -27,6 +27,9 @@ $.ajax({
 var markers = [];
 var markelements = [];
 
+// variabile globale per mantenere data odierna
+var oggi = new Date();
+
 // aggiorna posizione dei marker sulla mappa
 function aggiungimarker(dati) {
   var map = $('#map').vectorMap('get', 'mapObject');
@@ -38,6 +41,7 @@ function aggiungimarker(dati) {
     var marker = {
       name: posizione.nome,
       descrizione: posizione.descrizione,
+      data: posizione.data,
       latLng: [posizione.latitudine, posizione.longitudine],
       style: {
         fill: 'yellow',
@@ -47,11 +51,17 @@ function aggiungimarker(dati) {
       },
     };
 
-    map.addMarker(id, marker);
+    //non mostrare eventi passati
+    data_evento= new Date(posizione.data);
+    if (data_evento.getTime() > oggi.getTime()) {
+      map.addMarker(id, marker);
+    }
+    
     var markerElement = $('#map').find('.jvectormap-marker[data-index="' + id + '"]');   // aggiunge attributi ai marker
     $(markerElement).data('style', marker.style);
     $(markerElement).data('name', marker.name);
     $(markerElement).data('descrizione', marker.descrizione);
+    $(markerElement).data('data', marker.data);
 
     markers.push(marker.name);
     markelements.push(markerElement);   // array per mantenere markerElement
@@ -60,9 +70,11 @@ function aggiungimarker(dati) {
     $(markerElement).click(function() {
     var descrizione= $(this).data('descrizione');
     var name = $(this).data('name');
+    var data= $(this).data('data');
     $('#text-content').html(descrizione);
     $('#input_p').val(name);
     $('#nome').html(name);
+    $('#data').html(data);
   });
   }
 }
