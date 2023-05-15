@@ -20,3 +20,16 @@ $(document).ready(function() {
     });
   });
 });
+
+// Ajax per ottenere eventi a cui è iscritto l'utente
+$(document).ready(function() {
+    $.ajax({
+      url:  './php/get_events.php',
+      type:'POST',
+      success: function(dati) {
+        for (var i = 0; i < dati.length; i++) {
+          console.log(dati[i]);
+        }
+      }
+    });
+  });
