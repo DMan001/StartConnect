@@ -1,16 +1,6 @@
 <head>
   <link rel="stylesheet" href="css/nav.css">
   <script src="javascript/login.js"></script>
-  <script type="text/javascript">
-    function verificaAccesso() {
-      if (sessionStorage.getItem('username')) {
-        window.location.href = 'iscrizione.html';
-      }
-      else {
-        window.location.href = 'iscrizionelog.html';
-      }
-    }
-  </script>
 </head>
 
 <body onload="">
@@ -24,16 +14,13 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
     <ul class="navbar-nav ms-auto mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" onclick="return verificaAccesso()">Iscriviti ad un evento</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="organizzazione.html">Organizza un evento</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.html#contatti">Contatti</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="myArea.html">Area Personale</a>
+        <a class="nav-link" href="php/area.php">Area Personale</a>
       </li>
 
 
