@@ -1,3 +1,6 @@
+//file contenenete le funzioni per la gestione dell'area personale
+
+// Ajax per logout
 $(document).ready(function() {
   // Imposta il logout quando si clicca sul pulsante
   $('#logout').click(function() {

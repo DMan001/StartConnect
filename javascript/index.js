@@ -20,6 +20,7 @@ $(document).ready(function() {
   });
 });
 
+// Ajax per far iscrivere l'utente
 $(document).ready(function() {
   $('#iscriviti').click(function() {
     var input=$('#nome').text();
