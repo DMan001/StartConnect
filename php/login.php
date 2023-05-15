@@ -1,16 +1,32 @@
 <?php
-session_start();
 
 // script per fancy alert
 echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>';
 echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">';
 
-// chiamata al Database per verificare validità password inserita
-$dbconn = pg_connect("host=localhost port=5432 dbname=StartConnect 
+session_start();
+
+if(isset($_SESSION['loggedin']) and $_SESSION['loggedin'] == true) {
+    echo "<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    icon: 'error',
+                    title:'Error!',
+                    text: 'Sei già loggato!'
+                }).then(() => {
+                window.location.href = '../index.html';
+                });
+            });
+        </script>";
+}
+else{
+
+  // chiamata al Database per verificare validità password inserita
+  $dbconn = pg_connect("host=localhost port=5432 dbname=StartConnect 
             user=postgres password=biar") 
             or die('Could not connect: ' . pg_last_error());
 
-if  ($dbconn) {
+  if  ($dbconn) {
     $email = $_POST['inputEmailLogin'];
     $q1 = "select * from utente where email = $1";
     $result = pg_query_params($dbconn, $q1, array($email));
@@ -35,14 +51,12 @@ if  ($dbconn) {
         // verifica la password
         if (password_verify($password, $password_hash)) {
             
-            //inizia la sessione e impostiamo la variabile di sessione email e loggedin
-            session_start();
+            //impostiamo la variabile di sessione email e loggedin
             $_SESSION['email'] = $email;
             $_SESSION['loggedin'] = true;
 
             // success
             echo "<script>
-                sessionStorage.setItem('username', '" . $row['username'] . "');
                 document.addEventListener('DOMContentLoaded', function() {
                     Swal.fire({
                       icon: 'success',
@@ -68,5 +82,6 @@ if  ($dbconn) {
                 </script>";
         }
     }
+  }
 }
 ?>
