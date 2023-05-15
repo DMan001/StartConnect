@@ -1,4 +1,4 @@
-//file js per la gestione dell'area personale e dell'iscrizione agli ceventi
+//file javascript per la pagina index.html
 
 
 $(document).ready(function() {
