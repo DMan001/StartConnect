@@ -6,14 +6,13 @@ $(document).ready(function() {
   $('#logout').click(function() {
     $.ajax({
       url:  './php/logout.php',
-      type:  'POST',
-      dataType: 'text',
+      type:'POST',
       //callback che gestisce il risultato e mostra alert swal.fire
       success: function(not_relevant) {
         Swal.fire({
           icon: 'success',
           title: 'Success!',
-          text: 'LogOut avvenuto con successo!',
+          text:'LogOut avvenuto con successo!',
         }).then(function() {
           window.location.href = './index.html';
         });
