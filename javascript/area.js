@@ -6,7 +6,7 @@ $(document).ready(function() {
       type:  'POST',
       dataType: 'text',
       //callback che gestisce il risultato e mostra alert swal.fire
-      success: function(data) {
+      success: function(not_relevant) {
         Swal.fire({
           icon: 'success',
           title: 'Success!',
