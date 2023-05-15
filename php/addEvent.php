@@ -34,6 +34,25 @@
         "longitudine" => $longitudine
     );
 
+    //controllo se l'evento esiste già
+    $query = "select * from evento where nome = $1";
+    $result = pg_query_params($dbconn, $query, array($_POST["nome"]));
+
+    if($tuple=pg_fetch_array($result, null, PGSQL_ASSOC)){
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error!',
+              text: 'Nome evento già esistente, Scegline un altro!'
+            }).then(() => {
+              window.location.href = '../organizzazione.html';
+            });
+          });
+      </script>";
+    }
+    else{
+
     $res = pg_insert($dbconn, 'evento', $param);
 
     if ($res) {
@@ -48,7 +67,19 @@
             });
           });
       </script>";
-    } else {
-        echo "User must have sent wrong inputs\n";
     }
+    else{
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error!',
+              text: 'Errore nell\'aggiunta dell\'evento!'
+            }).then(() => {
+              window.location.href = '../organizzazione.html';
+            });
+          });
+      </script>";
+    }
+  }
 ?> 
