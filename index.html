@@ -13,8 +13,12 @@
   <link rel="stylesheet" href="jquery\jquery-jvectormap-2.0.5.css">
   <script src="jquery\jquery-jvectormap-it-mill.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.min.js"></script>
+  <script src="javascript\index.js"></script>
   
   <link rel="stylesheet" href="css/index.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
   
   <title>StartConnect</title>
 </head>
@@ -35,9 +39,6 @@
       <form>
         <p class="title" id="cerca">Cerca evento:</p>
         <input class="shadow" id="bar" type="text" value="">
-        <br>
-        <p class="title">Cerca con i TAG:</p>
-        <input class="shadow" type="text">
       </form>
 
       <h2 class="title">Nome dell'evento cliccato</h3>
@@ -49,6 +50,11 @@
       <div class="text-area">
         <p class="content" id="text-content"></p>
       </div>
+      
+      <div class="title">
+      <button id="iscriviti" style="height: 6vh;" class="btn btn-primary">Iscriviti</button>
+      </div>
+
     </div>
 
     <div class="col" id="map-container">
@@ -64,7 +70,7 @@
       
       <div class="col">
         <h3 class="titolo">Alla Ricerca di nuove idee?</h3>
-        <a href="php/iscrizione.php">
+        <a href="#main">
           <img src="images/img2.jpg" width="500px">
         </a>
       </div>

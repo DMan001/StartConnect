@@ -31,6 +31,12 @@ if  ($dbconn) {
         
         // verifica la password
         if (password_verify($password, $password_hash)) {
+            
+            //inizia la sessione e impostiamo la variabile di sessione email e loggedin
+            session_start();
+            $_SESSION['email'] = $email;
+            $_SESSION['loggedin'] = true;
+
             // success
             echo "<script>
                 document.addEventListener('DOMContentLoaded', function() {
