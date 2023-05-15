@@ -61,6 +61,7 @@ function aggiungimarker(dati) {
     var descrizione= $(this).data('descrizione');
     var name = $(this).data('name');
     $('#text-content').html(descrizione);
+    $('#input_p').val(name);
     $('#nome').html(name);
   });
   }

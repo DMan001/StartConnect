@@ -1,9 +1,13 @@
 <?php
+  echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>';
+  echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">';
+  
   //Permetto all'utente di iscriversi ad un evento gestendo la sua richiesta fatta dal pulsante iscriviti
   session_start();
 
-  $nome = $_POST['input'];
+  $nome = $_POST['input_p'];
   $email=$_SESSION['email'];
+
 
   $dbconn = pg_connect("host=localhost port=5432 dbname=StartConnect 
   user=postgres password=biar") 
@@ -17,7 +21,34 @@
   $result = pg_query_params($dbconn, $q1, array($nome,$email));
   
   if (($tuple=pg_fetch_array($result, null, PGSQL_ASSOC))) {
-          die("Errore");
-  }   
-  $res = pg_insert($dbconn, "iscrizionieventi", $param);
+    echo 
+    "<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Swal.fire({
+            icon: 'error',
+            title:'Error!',
+            text: 'Sei già iscritto a questo evento!'
+        }).then(() => {
+        window.location.href = '../index.html';
+        });
+    });
+    </script>";
+  }
+  else{ 
+    $res = pg_insert($dbconn, "iscrizionieventi", $param);
+    if($res){
+      echo 
+      "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+          Swal.fire({
+            icon: 'success',
+            title:'Success!',
+            text: 'Ti sei iscritto correttamente!'
+        }).then(() => {
+        window.location.href = '../index.html';
+        });
+      });
+      </script>";
+    }
+  }
 ?>
