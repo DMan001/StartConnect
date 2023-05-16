@@ -6,6 +6,7 @@ echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/d
 
 session_start();
 
+
 if(isset($_SESSION['loggedin']) and $_SESSION['loggedin'] == true) {
     echo "<script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -51,6 +52,7 @@ else{
         // verifica la password
         if (password_verify($password, $password_hash)) {
             
+            session_regenerate_id(true);
             //impostiamo la variabile di sessione email e loggedin
             $_SESSION['email'] = $email;
             $_SESSION['loggedin'] = true;
