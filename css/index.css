@@ -79,7 +79,6 @@ input {
 
 .jvectormap-marker:hover{
   fill: #f34821;
-  r:8;
   stroke-width: 4,
 }
 

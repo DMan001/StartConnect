@@ -19,15 +19,3 @@ $(document).ready(function() {
     },
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
