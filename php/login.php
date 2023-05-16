@@ -4,6 +4,7 @@
 echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>';
 echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">';
 
+session_set_cookie_params(0);
 session_start();
 
 
