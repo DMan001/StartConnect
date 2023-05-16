@@ -32,8 +32,17 @@ else{
     $q1 = "select * from utente where email = $1";
     $result = pg_query_params($dbconn, $q1, array($email));
     if (!($tuple=pg_fetch_array($result, null, PGSQL_ASSOC))) {
-        echo "<h1>Non sembra che ti sia registrato/a</h1>
-            <a href=../registrazione/index.html> Clicca qui per farlo </a>";
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                icon: 'error',
+                title:'Error!',
+                text: 'Non ti sei ancora registrato!'
+            }).then(() => {
+            window.location.href = '../index.html';
+            });
+        });
+    </script>";
     }
     else {
         $password = $_POST['inputPasswordLogin'];
