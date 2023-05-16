@@ -3,6 +3,7 @@ $(function() {
   $('#map').vectorMap({
     map: 'it_mill',
     backgroundColor: "#17b2ff",
+    zoomMax:100,
     series: {
       regions: [{
         values: {
@@ -46,8 +47,8 @@ function aggiungimarker(dati) {
       style: {
         fill: 'yellow',
         stroke: 'black',
-        'stroke-width': 2,
-        r: 6
+        'stroke-width': 1.75,
+        r: '0.8vh',
       },
     };
 
