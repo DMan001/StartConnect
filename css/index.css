@@ -24,7 +24,7 @@ body {
 }
 
 #cerca {
-  margin-top: 8vh;
+  /* margin-top: 8vh; */
 }
 
 .content {
@@ -57,7 +57,7 @@ body {
   text-align: center;
 }
 
-img {
+.form-image {
   display: block;
   float: left;
   height: 50vh;
@@ -66,6 +66,13 @@ img {
   margin-left: 2%;
   margin-right: 2%;
   border: 5px solid red
+}
+
+#img-content {
+  max-height: 35vh;
+  width: inherit;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input {
@@ -112,12 +119,13 @@ input {
 }
 
 .text-area{
-    background-color: #ccc;
     background-color: white;
     border: 1px solid #2196F3;
     font-size: max(1.25vmax,10px);
     margin:auto;
     overflow: auto;
+    line-height: inherit;
+    text-align: center;
     width: 80%;
     z-index: 2;
 }
@@ -130,7 +138,7 @@ input {
 .title{
     color: #453532;
     font-family: Arial, sans-serif;
-    font-size: 3vmin;
+    font-size: 2vmin;
     font-weight: bold;
     margin-top: 2vh;
     text-align: center;

@@ -57,6 +57,7 @@ else{
         
         // ottiene il risultato della query
         $row = pg_fetch_assoc($result);
+        $username = $row['username'];
         $password_hash = $row['password'];
         
         // verifica la password
@@ -66,6 +67,10 @@ else{
             //impostiamo la variabile di sessione email e loggedin
             $_SESSION['email'] = $email;
             $_SESSION['loggedin'] = true;
+            echo '<script> 
+                sessionStorage.setItem("email", "'. $email .'");
+                sessionStorage.setItem("username", "' . $username .'");
+            </script>';
 
             // success
             echo "<script>

@@ -15,6 +15,15 @@
     <script src="./javascript/mapsEvent.js"></script>
     <script src="https://polyfill.io/v3/polyfill.js?features=default"></script>
 
+    <script>
+      function autoResizeTextarea(element) {
+        element.style.height = 'auto'; // Ripristina l'altezza predefinita
+      
+        // Imposta l'altezza in base al contenuto scrollHeight
+        element.style.height = element.scrollHeight + 'px';
+      }
+    </script>
+
     
     <!--Navigation bar-->
     <script>
@@ -31,7 +40,7 @@
     <div class="container-5">
       <h1>Organizza un evento</h1>
       
-      <form action="./php/addEvent.php" method="POST">
+      <form action="./php/addEvent.php" method="POST" enctype="multipart/form-data">
         <div class="form-floating">
           <input  placeholder="Inserisci il nome dell'evento" type="text" 
                   class="form-control"name="nome" >
@@ -65,15 +74,19 @@
         </div>
 
         <div class="form-floating">
-          <textarea class="form-control"  name="descrizione" rows="3" placeholder="Inserisci la descrizione dell'evento"></textarea>
+          <textarea class="form-control" name="descrizione" placeholder="Inserisci la descrizione dell'evento" oninput="autoResizeTextarea(this)"></textarea>
           <label>Descrizione</label>
+        </div>
+
+        <div>
+          <input type="file" name="image" enctype="multipart/form-data">
         </div>
         
         <button type="submit" class="btn btn-primary">Aggiungi</button>
       </form>
-
     </div>
   </body>
+
 </html>
 
 

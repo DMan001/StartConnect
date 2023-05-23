@@ -3,7 +3,7 @@
   flex-direction: column;
   background-color: rgba(190, 192, 194, 0.582);
   min-height: 100vh;
-  padding-top:50px;
+  padding-top: max(8vh, 60px);
 }
 
 .form-floating{

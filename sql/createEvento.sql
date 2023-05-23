@@ -11,5 +11,6 @@ create table evento (
 	data		date,
 	latitudine	float,
 	longitudine	float,
-	descrizione	text
+	descrizione	text,
+	urlimmagine	text
 );

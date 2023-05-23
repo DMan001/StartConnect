@@ -50,6 +50,7 @@ function aggiungimarker(dati) {
         'stroke-width': 1.75,
         r: '0.8vh',
       },
+      urlimmagine: posizione.urlimmagine
     };
 
     //non mostrare eventi passati
@@ -63,6 +64,7 @@ function aggiungimarker(dati) {
     $(markerElement).data('name', marker.name);
     $(markerElement).data('descrizione', marker.descrizione);
     $(markerElement).data('data', marker.data);
+    $(markerElement).data('urlimmagine', marker.urlimmagine);
 
     markers.push(marker.name);
     markelements.push(markerElement);   // array per mantenere markerElement
@@ -71,11 +73,13 @@ function aggiungimarker(dati) {
     $(markerElement).click(function() {
     var descrizione= $(this).data('descrizione');
     var name = $(this).data('name');
-    var data= $(this).data('data');
+    var data = $(this).data('data');
+
     $('#text-content').html(descrizione);
-    $('#input_p').val(name);
+    $('#bar').val(name);
     $('#nome').html(name);
     $('#data').html(data);
+    $('#img-content').attr('src', $(this).data('urlimmagine'));
   });
   }
 }
