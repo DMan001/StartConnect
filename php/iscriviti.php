@@ -6,7 +6,7 @@
   session_start();
 
   $nome = $_POST['input_p'];
-  $email=$_SESSION['email'];
+  $email = $_SESSION['email'];
 
 
   $dbconn = pg_connect("host=localhost port=5432 dbname=StartConnect 
@@ -17,7 +17,7 @@
         "nome" => $nome, 
         "email" => $email,
       );
-  $q1 = "select * from iscrizionieventi where nome = $1 and email = $2";
+  $q1 = "select * from iscrizioni where nome = $1 and email = $2";
   $result = pg_query_params($dbconn, $q1, array($nome,$email));
 
   $q2 = "select * from evento where nome = $1";
@@ -55,7 +55,7 @@
       </script>";
     }
     else{ 
-      $res = pg_insert($dbconn, "iscrizionieventi", $param);
+      $res = pg_insert($dbconn, "iscrizioni", $param);
       if($res){
         echo 
         "<script>

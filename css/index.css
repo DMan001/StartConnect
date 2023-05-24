@@ -5,10 +5,8 @@ body {
     overflow-x: hidden;
 }
 
-#buttonIscriviti {
+#iscriviti {
   width: 60%;
-  margin-top: 1.5vh;
-  margin-left: 20%
 }
 
 .card {
@@ -23,26 +21,24 @@ body {
     font-size: 1em;
 }
 
-#cerca {
-  /* margin-top: 8vh; */
-}
-
 .content {
   margin-left: 3px;
 }
 
 #data{
-  height:1.7vh;
+  height:1em;
 }
 
 #form{
   background-color: #98d0fe;
   grid-area: a;
+  max-width: 33vw;
 }
 
 #forms {
     background-color: #fffff9;
     padding-top: 115px;
+    padding-bottom: 1vh;
 }
 
 #forms > #row{
@@ -69,8 +65,9 @@ body {
 }
 
 #img-content {
-  max-height: 35vh;
-  width: inherit;
+  display: block;
+  max-height: 20vh;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -78,6 +75,7 @@ body {
 input {
   width: 70%;
   margin-left: 15%;
+  text-align: center;
 }
 
 .jumbotron {
@@ -131,8 +129,10 @@ input {
 }
 
 #text-content{
-    height:12vh;
-    max-width: 100px;
+    min-height: 1em;
+    max-height: 28vh;
+    max-width: 30vw;
+    /* font-size: medium; */
 }
 
 .title{

@@ -2,3 +2,32 @@
     padding-top: max(8vh, 60px);
     padding-left: 10px;
 }
+
+.event-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: center; */
+  }
+  
+  .event-card {
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .event-card h2 {
+    margin-top: 0;
+  }
+  
+  .event-card p {
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 260px;
+  }
+  
