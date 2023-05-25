@@ -29,5 +29,7 @@
 
   img {
     max-width: 260px;
+    display: block;
+    margin-bottom: 10px;
   }
   

@@ -15,7 +15,8 @@ $(function() {
 });
 
 // carica i dati dal database
-$.ajax({
+$(document).ready(function() {
+  $.ajax({
     url: "./php/updateEvent.php",
     type: "GET",
     dataType: "json",
@@ -23,6 +24,7 @@ $.ajax({
       aggiungimarker(dati);
     },
   });
+});
 
 // array globale per mantenere markers
 var markers = [];
@@ -31,30 +33,30 @@ var markelements = [];
 // variabile globale per mantenere data odierna
 var oggi = new Date();
 
-// aggiorna posizione dei marker sulla mappa
+// aggiorna info dei marker sulla mappa
 function aggiungimarker(dati) {
   var map = $('#map').vectorMap('get', 'mapObject');
   
   map.removeAllMarkers();
   for (var id = 0; id < dati.length; id++) {
-    var posizione = dati[id];
+    var info = dati[id];
     
     var marker = {
-      name: posizione.nome,
-      descrizione: posizione.descrizione,
-      data: posizione.data,
-      latLng: [posizione.latitudine, posizione.longitudine],
+      name: info.nome,
+      descrizione: info.descrizione,
+      data: info.data,
+      latLng: [info.latitudine, info.longitudine],
       style: {
         fill: 'yellow',
         stroke: 'black',
         'stroke-width': 1.75,
         r: '0.8vh',
       },
-      urlimmagine: posizione.urlimmagine
+      urlimmagine: info.urlimmagine
     };
 
     //non mostrare eventi passati
-    data_evento= new Date(posizione.data);
+    data_evento= new Date(info.data);
     if (data_evento.getTime() > oggi.getTime()) {
       map.addMarker(id, marker);
     }
@@ -117,14 +119,3 @@ function filtra(input) {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-

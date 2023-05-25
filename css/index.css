@@ -32,7 +32,7 @@ body {
 #form{
   background-color: #98d0fe;
   grid-area: a;
-  max-width: 33vw;
+  width: 29vw;
 }
 
 #forms {
@@ -73,9 +73,24 @@ body {
 }
 
 input {
-  width: 70%;
-  margin-left: 15%;
+  width: 80%;
+  height: 2em;
+  display: block;
+  margin: auto;
   text-align: center;
+}
+
+#iscritto {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  width: 80%;
+  margin: auto;
+  display: block;
+  font-size: 1vmin;
+  margin-top: 0.5vh;
 }
 
 .jumbotron {
@@ -119,12 +134,13 @@ input {
 .text-area{
     background-color: white;
     border: 1px solid #2196F3;
-    font-size: max(1.25vmax,10px);
+    font-size: max(1.25vmin,10px);
     margin:auto;
-    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: wrap;
     line-height: inherit;
     text-align: center;
-    width: 80%;
+    width: 90%;
     z-index: 2;
 }
 

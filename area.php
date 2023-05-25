@@ -81,11 +81,11 @@ if(isset($_SESSION['loggedin'])==false) {
 
           echo '<div class="event-card">';
           echo '<h2>' . $nomeEvento . '</h2>';
-          echo '<p>Luogo: ' . $luogoEvento . '</p>';
-          echo '<p>Data: ' . $dataEvento . '</p>';
-          echo '<p>Host: ' . $host . '</p>';
-          echo '<p>Descrizione: ' . $descrizione . '</p>';
           echo '<img src="' . $urlImmagine . '" alt="Immagine evento">';
+          echo '<p>Luogo:<br>' . $luogoEvento . '</p>';
+          echo '<p>Data:<br>' . $dataEvento . '</p>';
+          echo '<p>Host:<br>' . $host . '</p>';
+          echo '<p>Descrizione:<br>' . $descrizione . '</p>';
           echo '</div>';
         }
         echo "</div>";
