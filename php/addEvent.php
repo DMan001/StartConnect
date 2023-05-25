@@ -90,6 +90,7 @@
       </script>";
     }
     else{
+      echo pg_last_error();
       echo $save_path;
       echo $param["urlimmagine"];
 

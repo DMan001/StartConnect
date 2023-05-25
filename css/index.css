@@ -134,7 +134,7 @@ input {
 .text-area{
     background-color: white;
     border: 1px solid #2196F3;
-    font-size: max(1.25vmin,10px);
+    font-size: max(1.8vmin,10px);
     margin:auto;
     overflow-y: scroll;
     overflow-x: wrap;
@@ -142,6 +142,10 @@ input {
     text-align: center;
     width: 90%;
     z-index: 2;
+}
+
+#data {
+  height: 2em;
 }
 
 #text-content{

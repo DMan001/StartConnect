@@ -3,7 +3,7 @@
             or die("Errore di connessione:  . pg_last_error()");
 
     $result = pg_query($dbconn, 
-    "select nome, descrizione, latitudine, longitudine, data, urlimmagine from evento");
+    "select * from evento");
     
     $coordinate = array();
     while ($row = pg_fetch_assoc($result)) {

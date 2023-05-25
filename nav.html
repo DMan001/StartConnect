@@ -1,6 +1,26 @@
 <head>
   <link rel="stylesheet" href="css/nav.css">
   <script src="javascript/nav.js" type="text/javascript"></script>
+  <script>
+    function validateSignup() {
+      var username = document.forms["signup-form"]["inputUsername"].value;
+      var email = document.forms["signup-form"]["inputEmail"].value;
+      var password = document.forms["signup-form"]["inputPassword"].value;
+      if (password.length < 8) {
+        alert("La password deve essere lunga almeno 8 caratteri");
+        return false;
+      }
+      if (username.length < 4) {
+        alert("Lo username deve essere lungo almeno 4 caratteri");
+        return false;
+      }
+      if (email.length < 4) {
+        alert("L'email deve essere lunga almeno 4 caratteri");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </head>
 
 <body onload="">
@@ -46,7 +66,7 @@
 				<a id="signup" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
 				<ul class="dropdown-menu dropdown-menu-end">					
 					<li>
-						<form action="php/signup.php" method="post">
+						<form id="signup-form" action="php/signup.php" onsubmit="return validateSignup();" method="post">
               <div class="form-group">
                 <input type="text" name="inputUsername" class="form-control" placeholder="Username" style="width:80%;" required="required">
               </div>

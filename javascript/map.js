@@ -40,19 +40,22 @@ function aggiungimarker(dati) {
   map.removeAllMarkers();
   for (var id = 0; id < dati.length; id++) {
     var info = dati[id];
-    
+    var luogo = info.via + ', ' + info.civico + ', ' + info.città + ', ' + info.provincia;
+
     var marker = {
       name: info.nome,
       descrizione: info.descrizione,
       data: info.data,
       latLng: [info.latitudine, info.longitudine],
+      urlimmagine: info.urlimmagine,
+      luogo: luogo,
+      host: info.host,
       style: {
         fill: 'yellow',
         stroke: 'black',
         'stroke-width': 1.75,
         r: '0.8vh',
       },
-      urlimmagine: info.urlimmagine
     };
 
     //non mostrare eventi passati
@@ -67,6 +70,8 @@ function aggiungimarker(dati) {
     $(markerElement).data('descrizione', marker.descrizione);
     $(markerElement).data('data', marker.data);
     $(markerElement).data('urlimmagine', marker.urlimmagine);
+    $(markerElement).data('luogo', marker.luogo);
+    $(markerElement).data('host', marker.host);
 
     markers.push(marker.name);
     markelements.push(markerElement);   // array per mantenere markerElement
@@ -77,11 +82,12 @@ function aggiungimarker(dati) {
     var name = $(this).data('name');
     var data = $(this).data('data');
 
-    $('#text-content').html(descrizione);
+    $('#text-content').html("Host: " + $(this).data('host') + "<br>" + descrizione);
     $('#bar').val(name);
     $('#nome').html(name);
-    $('#data').html(data);
+    $('#data').html(data + '<br>' + $(this).data('luogo'));
     $('#img-content').attr('src', $(this).data('urlimmagine'));
+    $('#img-content').attr('onClick', "expandImage()");
   });
   }
 }

@@ -40,6 +40,30 @@
       // Imposta l'altezza in base al contenuto scrollHeight
       element.style.height = element.scrollHeight + 'px';
     }
+
+    function expandImage() {
+      var img = document.getElementById("img-content");
+      img.style.maxHeight = "80vh"; // Imposta l'altezza in base all'aspetto originale
+      img.style.position = "fixed"; // Posiziona l'immagine in modo fisso sulla pagina
+      img.style.top = "50%"; // Centra verticalmente
+      img.style.left = "50%"; // Centra orizzontalmente
+      img.style.transform = "translate(-50%, -50%)"; // Centra l'immagine esattamente
+      img.style.zIndex = "9999"; // Assicura che l'immagine sia in primo piano
+      img.style.cursor = "pointer"; // Cambia il cursore del mouse
+      img.setAttribute("onclick", "shrinkImage()"); // Imposta un nuovo gestore di eventi per ridurre l'immagine al clic
+    }
+
+    function shrinkImage() {
+      var img = document.getElementById("img-content");
+      img.style.maxHeight = ""; // Ripristina l'altezza originale
+      img.style.position = ""; // Ripristina il posizionamento predefinito
+      img.style.top = ""; // Ripristina la posizione verticale
+      img.style.left = ""; // Ripristina la posizione orizzontale
+      img.style.transform = ""; // Ripristina la trasformazione
+      img.style.zIndex = ""; // Ripristina lo z-index predefinito
+      img.style.cursor = ""; // Ripristina il cursore predefinito
+      img.setAttribute("onclick", "expandImage()"); // Ripristina il gestore di eventi per espandere l'immagine al clic
+    }
   </script>
   
   <title>StartConnect</title>
@@ -61,25 +85,18 @@
       <form action="php/iscriviti.php" method="post">
         <p class="title" id="cerca">Cerca evento:</p>
         <input class="shadow" id="bar" type="text" name="input_p" value="" autofocus>
-      
 
-        <!-- <h2 class="title">Nome dell'evento cliccato</h2>
-        <div class="text-area">
-          <p class="content" id="nome"></p>
-          <input type="hidden" id="input_p" name="input_p" value="">
-        </div> -->
-
-        <h2 class="title">Data dell'evento</h2>
+        <h2 class="title">Data e luogo dell'evento</h2>
         <div class="text-area">
           <p class="content" id="data"></p>
         </div>
         
-        <h2 class="title">Descrizione dell'evento cliccato</h2>
+        <h2 class="title">Descrizione dell'evento</h2>
         <div class="text-area">
           <p class="content" id="text-content"></p>
         </div>
 
-        <h2 class="title">Immagine dell'evento cliccato</h2>
+        <h2 class="title">Immagine dell'evento</h2>
         <div>
           <img id="img-content" src="">
         </div>

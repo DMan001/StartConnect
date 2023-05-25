@@ -1,13 +1,13 @@
 drop table if exists evento;
 
 create table evento (
-	nome		varchar(40) PRIMARY KEY,
-	host		varchar(40),
+	nome		varchar PRIMARY KEY,
+	host		varchar,
 	email		varchar,
 	via			varchar,
 	civico		integer,
-	città		varchar(40),
-	provincia	varchar(40),
+	città		varchar,
+	provincia	varchar,
 	data		date,
 	latitudine	float,
 	longitudine	float,
