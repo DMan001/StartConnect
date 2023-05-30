@@ -21,6 +21,22 @@ $(document).ready(function() {
   });
 });
 
+
+
+function Cancella(evento) {
+  // Use AJAX to send a request to delete the event
+  $.ajax({
+    url: './php/cancellazione.php',
+    type:'POST',
+    data: {evento: evento},
+    success: function(ok) {
+        Swal.fire('Success', 'Evento cancellato con successo', 'success').then(function() {
+          location.reload();
+        });
+    }
+  });
+}
+
 // Ajax per ottenere eventi a cui è iscritto l'utente
 $(document).ready(function() {
     $.ajax({

@@ -1,5 +1,9 @@
 /* cerca di ordinare in modo alfabetico */
 
+#bar{
+  font-size: 2vh;
+}
+
 body {
     background-color: #cff1ff;
     overflow-x: hidden;
@@ -134,7 +138,7 @@ input {
 .text-area{
     background-color: white;
     border: 1px solid #2196F3;
-    font-size: max(1.8vmin,10px);
+    font-size: max(2vmin,10px);
     margin:auto;
     overflow-y: scroll;
     overflow-x: wrap;

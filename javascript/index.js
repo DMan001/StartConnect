@@ -15,6 +15,7 @@ $(document).ready(function() {
       if (!infos.loggedin) {
         iscriviti.prop('disabled', true);
         alert.text('Effettua il login per iscriverti');
+        alert.css('font-size', '2vh');
       } else {
         iscriviti.prop('disabled', false);
         alert.text(''); // Rimuove il testo se l'utente è loggato

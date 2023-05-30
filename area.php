@@ -46,7 +46,7 @@ if(isset($_SESSION['loggedin'])==false) {
 
     <div id="info">
     <h1>Benvenuto <span id="username" style="text-align: left"></span></h1>
-    <h2>Qui puoi visualizzare i tuoi eventi</h2>
+    <h2>Qui puoi visualizzare gli eventi a cui ti sei iscritto:</h2>
     
     <?php
     //connessione al database
@@ -68,7 +68,8 @@ if(isset($_SESSION['loggedin'])==false) {
         echo "Non sei iscritto a nessun evento";
       }
       else{
-        echo "Ecco gli eventi a cui sei iscritto:";
+
+        echo "<br>";
 
         echo "<div class='event-container'>";
         while ($row = pg_fetch_assoc($result)) {
@@ -86,6 +87,7 @@ if(isset($_SESSION['loggedin'])==false) {
           echo '<p>Data:<br>' . $dataEvento . '</p>';
           echo '<p>Host:<br>' . $host . '</p>';
           echo '<p>Descrizione:<br>' . $descrizione . '</p>';
+          echo '<button class="btn btn-danger" onclick="Cancella(\'' . $nomeEvento . '\')">Cancella</button>';
           echo '</div>';
         }
         echo "</div>";

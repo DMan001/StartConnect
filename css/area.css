@@ -17,11 +17,12 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f9f9f9;
+    font-size: 2vh;
   }
   
   .event-card h2 {
     margin-top: 0;
-  }
+  }  
   
   .event-card p {
     margin-bottom: 10px;
@@ -32,4 +33,19 @@
     display: block;
     margin-bottom: 10px;
   }
+
+@media screen and (max-width: 1200px) {
+  .event-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .event-card {
+    width: 80%;
+    margin: 10px 0;
+    height: 80%;
+  }
+  img {
+    max-width: 90%;
+  }
+}
   
