@@ -87,12 +87,11 @@ if(isset($_SESSION['loggedin'])==false) {
           echo '<p>Data:<br>' . $dataEvento . '</p>';
           echo '<p>Host:<br>' . $host . '</p>';
           echo '<p>Descrizione:<br>' . $descrizione . '</p>';
-          echo '<button class="btn btn-danger" onclick="Cancella(\'' . $nomeEvento . '\')">Cancella</button>';
+          echo '<button class="btn btn-danger" onclick="Cancella(\'' . addslashes($nomeEvento). '\')">Cancella</button>';
           echo '</div>';
         }
         echo "</div>";
       }
-
 
     }
     ?>
