@@ -1,5 +1,4 @@
-//file contenenete le funzioni per la gestione dell'area personale
-
+// chiama la funzione per cancellare l'evento
 function Cancella(evento) {
   $.ajax({
     url: './php/cancellazione.php',

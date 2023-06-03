@@ -17,6 +17,7 @@
         "nome" => $nome, 
         "email" => $email,
       );
+      
   $q1 = "select * from iscrizioni where nome = $1 and email = $2";
   $result = pg_query_params($dbconn, $q1, array($nome,$email));
 

@@ -1,6 +1,6 @@
 //file javascript per la pagina index.html
 
-
+// Funzione che gestisce il click sul pulsante iscriviti rendendolo disabilitato
 $(document).ready(function() {
   // Ajax per ottenere le informazioni sullo stato del login
   $.ajax({

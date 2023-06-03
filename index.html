@@ -1,4 +1,3 @@
-<!--build an html page with a navbar at the top-->
 <!DOCTYPE html>
 <html>
 
@@ -41,6 +40,7 @@
       element.style.height = element.scrollHeight + 'px';
     }
 
+    // Ingrandisci l'immagine al clic
     function expandImage() {
       var img = document.getElementById("img-content");
       img.style.maxHeight = "80vh"; // Imposta l'altezza in base all'aspetto originale
@@ -53,6 +53,7 @@
       img.setAttribute("onclick", "shrinkImage()"); // Imposta un nuovo gestore di eventi per ridurre l'immagine al clic
     }
 
+    // Riduci l'immagine al clic
     function shrinkImage() {
       var img = document.getElementById("img-content");
       img.style.maxHeight = ""; // Ripristina l'altezza originale

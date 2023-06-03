@@ -8,11 +8,8 @@ if(isset($_SESSION['loggedin'])==false) {
 <!DOCTYPE html>
 <html >
   <head>
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <link rel="stylesheet" href="css/forms.css"> -->
     <link rel="stylesheet" href="css/area.css">
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="javascript\area.js"></script>
@@ -34,7 +31,6 @@ if(isset($_SESSION['loggedin'])==false) {
 
   <body>
       <!-- Navbar -->
-    <!--Navigation bar-->
     <div id="nav-placeholder">
     </div>
     <script>
@@ -42,7 +38,6 @@ if(isset($_SESSION['loggedin'])==false) {
         $("#nav-placeholder").load("nav.html");
       });
     </script>
-    <!--end of Navigation bar-->
 
     <div id="info">
     <h1>Benvenuto <span id="username" style="text-align: left"></span></h1>
@@ -55,7 +50,8 @@ if(isset($_SESSION['loggedin'])==false) {
     //se la connessione è andata a buon fine
     if ($dbconn) {
       $query = "SELECT *
-                FROM iscrizioni LEFT JOIN evento ON iscrizioni.nome = evento.nome WHERE iscrizioni.email = $1";
+                FROM iscrizioni LEFT JOIN evento ON iscrizioni.nome = evento.nome 
+                WHERE iscrizioni.email = $1";
       
       $result = pg_query_params($dbconn, $query, array($_SESSION['email']));
 
@@ -74,9 +70,13 @@ if(isset($_SESSION['loggedin'])==false) {
         echo "<div class='event-container'>";
         while ($row = pg_fetch_assoc($result)) {
           $nomeEvento = $row['nome'];
-          $luogoEvento = $row['via'] .' '. $row['civico'] . ', '. $row['città'] . ', ' . $row['provincia'];
+          if ($row['civico'] == 0)
+            $luogoEvento = $row['via'] . ', '. $row['città'] . ', ' . $row['provincia'];
+          else
+            $luogoEvento = $row['via'] .' '. $row['civico'] . ', '. $row['città'] . ', ' . $row['provincia'];
           $dataEvento = $row['data'];
           $host = $row['host'];
+          $email = $row['email'];
           $descrizione = $row['descrizione'];
           $urlImmagine = $row['urlimmagine'];
 
@@ -85,8 +85,9 @@ if(isset($_SESSION['loggedin'])==false) {
           echo '<img src="' . $urlImmagine . '" alt="Immagine evento">';
           echo '<p>Luogo:<br>' . $luogoEvento . '</p>';
           echo '<p>Data:<br>' . $dataEvento . '</p>';
-          echo '<p>Host:<br>' . $host . '</p>';
-          echo '<p>Descrizione:<br>' . $descrizione . '</p>';
+          echo '<p>Host:<br><em>' . $host . '</em></p>';
+          echo '<p>Email:<br>' . $email . '</p>';
+          echo '<p>Descrizione:<br><em>' . $descrizione . '</em></p>';
           echo '<button class="btn btn-danger" onclick="Cancella(\'' . addslashes($nomeEvento). '\')">Cancella</button>';
           echo '</div>';
         }

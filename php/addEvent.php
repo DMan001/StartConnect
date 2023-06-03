@@ -30,11 +30,6 @@
       $save_path = $upload_dir.$name;
       move_uploaded_file($temp_name, $save_path);   // sposta in uploads
 
-      /* NON NECESSARIO
-      $fh = fopen($save_path, 'rb');    // lettura binaria
-      $fbytes = fread($fh, filesize($save_path));   // legge fino alla dimensione del file
-      */
-
       $relative_path = 'php/uploads/'.$name;
     }
     
@@ -51,7 +46,6 @@
         "descrizione" => $_POST["descrizione"],
         "latitudine"  => $latitudine,
         "longitudine" => $longitudine,
-        // "image"       => base64_encode($fbytes),
         "urlimmagine" => $relative_path
     );
 
@@ -90,21 +84,17 @@
       </script>";
     }
     else{
-      echo pg_last_error();
-      echo $save_path;
-      echo $param["urlimmagine"];
-
-      //   echo "<script>
-      //   document.addEventListener('DOMContentLoaded', function() {
-      //       Swal.fire({
-      //         icon: 'error',
-      //         title: 'Error!',
-      //         text: 'Errore nell\'aggiunta dell\'evento! ". pg_last_error() ."'
-      //       }).then(() => {
-      //         window.location.href = '../organizzazione.html';
-      //       });
-      //     });
-      // </script>";
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error!',
+              text: 'Errore nell\'aggiunta dell\'evento! ". pg_last_error() ."'
+            }).then(() => {
+              window.location.href = '../organizzazione.html';
+            });
+          });
+      </script>";
     }
   }
 ?> 

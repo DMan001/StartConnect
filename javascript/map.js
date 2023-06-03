@@ -64,6 +64,7 @@ function aggiungimarker(dati) {
       map.addMarker(id, marker);
     }
     
+    // salva le informazioni nei marker
     var markerElement = $('#map').find('.jvectormap-marker[data-index="' + id + '"]');   // aggiunge attributi ai marker
     $(markerElement).data('style', marker.style);
     $(markerElement).data('name', marker.name);
@@ -82,6 +83,7 @@ function aggiungimarker(dati) {
     var name = $(this).data('name');
     var data = $(this).data('data');
 
+    // aggiorna contenuto della homepage con informazioni evento selezionato
     $('#text-content').html("Host: " + $(this).data('host') + "<br>" + descrizione);
     $('#bar').val(name);
     $('#nome').html(name);
